@@ -1,0 +1,380 @@
+body {
+  font-family: 'Ubuntu Condensed', 'PingFang TC', "Lantinghei TC", '微軟正黑體','Microsoft JhengHei', sans-serif;
+  background: #222;
+  color: #ccc;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #666;
+  margin: 1em 0;
+  padding: 0;
+}
+
+code, pre {
+  padding: 2px 4px;
+  margin-right: 2px;
+  font-size: 90%;
+  color: #ddd;
+  background-color: #3e3e3e;
+  border-radius: 1px!important;
+}
+
+pre {
+  border-color: #666;
+  padding: 5px 5px 5px 5px;
+
+}
+
+#top-nav {
+  border-width: 0 0 2px;
+  border-color: #666;
+}
+
+#home-masthead {
+  background: #253D60;
+  padding: 180px 0;
+}
+
+#home-masthead .title {
+  font-size: 5em;
+}
+
+#home-masthead .subtitle {
+  font-size: 2.3em;
+}
+
+#home-masthead form {
+  display: inline-block;
+}
+
+#home-masthead .btn {
+  padding: 20px 32px;
+  margin: 25px 15px 25px 0;
+}
+
+#content {
+  padding-top: 40px;
+}
+
+#footer {
+  margin-top: 30px;
+  padding: 20px;
+  border-top: 1px solid #666;
+  text-align: center;
+}
+
+/* dashboard-problems */
+
+#dashboard-problems {
+  margin-bottom: 40px;
+}
+
+#dashboard-problems ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#dashboard-problems li {
+  display: block;
+}
+
+#problem-list {
+  width: 100%;
+}
+
+#problem-list .solved {
+  /*background: #333;*/
+}
+
+#problem-list .solved > .problem-info {
+  opacity: .2;
+}
+
+#problem-list .solved > .flag-list li {
+  background-color: green;
+  opacity: .9;
+}
+
+.problem-entry {
+  width: 32%;
+  height: 150px;
+  margin: 0.5%;
+  float: left;
+  background-color: #282828;
+  box-shadow: inset 0 0 10px #3a3a3a;
+  cursor: pointer;
+  position:relative;
+}
+
+@media (max-width: 768px) {
+  .problem-entry {
+    width: 48%;
+  }
+}
+
+.problem-entry:hover {
+  box-shadow: 0 0 10px #111;
+}
+
+.problem-info {
+  float: left;
+  width: 100%;
+  height: 150px;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.problem-entry.locked div {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.problem-entry.locked div p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 80px;
+  color: #888;
+}
+
+.problem-info .title {
+  display: table;
+  height: 100%;
+  width: 100%;
+  font-size: 1.3em;
+}
+
+.problem-info .title p {
+  display: table-cell;
+  vertical-align: middle;
+  max-width: 145px;
+  word-wrap: break-word;
+}
+
+.problem-info .title p .tags {
+  font-size: 0.8em;
+}
+
+.problem-info .tag-list, 
+.problem-info .description, 
+.problem-info .hint, 
+.problem-info .solved_times {
+  display: none;
+}
+
+.flag-list {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+}
+
+.flag-list li {
+  background-color: #555;
+  margin: 5px 0;
+  padding: 3px 8px;
+}
+
+.flag-list li:first-child {
+  margin-top: 10px;
+}
+
+
+.modal-dialog {
+  padding-top: 5%;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #252525;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+.modal-header, .modal-footer {
+  border-color: #111;
+}
+
+#challenge-description {
+  margin-bottom: 50px;
+}
+
+#challenge-solved_times {
+  margin-top: 5px;
+}
+
+#submit-status {
+  margin-top: 8px;
+  text-align: left;
+}
+
+
+/* dashboard-scoreboard */
+
+#mini-scoreboard{
+  width: 100%;
+  table-layout: fixed;
+}
+#mini-scoreboard td{
+  font-size: 1.15em;
+}
+#mini-scoreboard td:last-child{
+  width: 2.5em;
+  text-align: right;
+}
+
+/* dashboard-announcements */
+
+#dashboard-announcements {
+  overflow-y: scroll;
+  height: 150px;
+  margin-bottom: 40px;
+  background-color: #282828;
+  box-shadow: inset 0 0 10px #3a3a3a;
+  border-radius: 3px;
+  padding: 15px 0;
+}
+
+/* scoreboard */
+
+#scoreboard {
+  table-layout: fixed;
+}
+#scoreboard .solved {
+  background-color: #555 !important;
+}
+#scoreboard.table-hover tbody tr:hover td {
+  background-color: #333;
+}
+#scoreboard #total-title {
+  text-align: center;
+}
+#scoreboard .team-url, #scoreboard .team-url:hover, #scoreboard .team-url:active, #scoreboard .team-url:visited {
+  color: #CCC;
+}
+#scoreboard .show-on-hover {
+  position: relative;
+  white-space: nowrap;
+}
+#scoreboard .show-on-hover div {
+  position: absolute;
+  display: none;
+}
+#scoreboard .show-on-hover:hover div {
+  display: block;
+  z-index: 10;
+}
+#scoreboard .show-on-hover.flag div {
+  top: -2em;
+}
+
+#scoreboard .show-on-hover.flag div p {
+  font-size: 0.8em;
+}
+
+/* scoreboard2 */
+
+
+/* trend */
+
+#trend {
+  width: 100%;
+  height: 500px;
+}
+#trend_tooltip {
+  position: absolute;
+  display: none;
+  border: 3px solid black;
+  background-color: white;
+  opacity: 0.8;
+  padding: 3px;
+  color: blue;
+}
+
+
+/* solved */
+
+#solved.table {
+  background-color: #2e3338;
+}
+
+#solved.table th,
+#solved.table td {
+  border-top: 1px solid #1c1e22;
+}
+
+#solved.table > thead > tr > th {
+  border-bottom: 2px solid #1c1e22;
+}
+
+#solved.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #353a41;
+}
+
+#solved.table-hover > tbody > tr:hover {
+  background-color: #49515a;
+}
+
+#solved.table {
+  background-color: #2e3338;
+}
+
+#lost-password {
+  margin-left: 10px;
+}
+
+
+/* popover */
+
+.popover {
+  background-color: #2e3338;
+  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+}
+
+.popover-title {
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+}
+
+.popover-title, .popover-content {
+  background-color: #252525;
+}
+
+.popover.top > .arrow {
+  border-top-color: #666666;
+  border-top-color: rgba(0, 0, 0, 0.25);
+}
+
+.popover.top > .arrow:after {
+  border-top-color: #2e3338;
+}
+
+/* hint */
+
+.hint-btn {
+  margin-bottom: 5px;
+}
+
+.hint-content {
+  margin-left: 3px;
+}
+
+.hint-score {
+  background-color: #932600!important;
+}
+
+.modal-hint {
+  text-align: left;
+}
+
+.tooltip-inner {
+  width: 120px; 
+}
